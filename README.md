@@ -1,1 +1,1 @@
-# School Payments System Dashboard
+# School Payments Dashboard
