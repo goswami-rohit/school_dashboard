@@ -18,6 +18,7 @@ ENV NEXT_TELEMETRY_DISABLED=1
 ENV NEXT_PRIVATE_STANDALONE=true
 
 RUN --mount=type=secret,id=DATABASE_URL,env=DATABASE_URL \
+    --mount=type=secret,id=JWT_SECRET,env=JWT_SECRET \
     npm run build
 
 # Stage 3: Runner (Ultra minimal)

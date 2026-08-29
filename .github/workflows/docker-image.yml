@@ -41,3 +41,4 @@ jobs:
           tags: goswamirohit/schooldashboard:v1
           secrets: |
             "DATABASE_URL=${{ secrets.DATABASE_URL }}"
+            "JWT_SECRET=${{ secrets.JWT_SECRET }}"
