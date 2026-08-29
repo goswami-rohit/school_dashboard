@@ -10,7 +10,7 @@ services:
     env_file:
       - .env.production
 
-    environment:
-      - DATABASE_URL=${DATABASE_URL}
-      - NODE_OPTIONS=--max-old-space-size=1536
-      - JWT_SECRET=${JWT_SECRET}
+    # environment:
+    #   - DATABASE_URL=${DATABASE_URL}
+    #   - NODE_OPTIONS=--max-old-space-size=1536
+    #   - JWT_SECRET=${JWT_SECRET}
