@@ -1,0 +1,16 @@
+services:
+  schooldashboard:
+    # Use your Docker image name here
+    image: goswamirohit/schooldashboard:v1
+    container_name: schooldashboard
+    restart: unless-stopped
+    ports:
+      - "55002:3000"
+    # This is the key line that tells Docker to read the variables from the .env file
+    env_file:
+      - .env.production
+
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
+      - NODE_OPTIONS=--max-old-space-size=1536
+      - JWT_SECRET=${JWT_SECRET}
